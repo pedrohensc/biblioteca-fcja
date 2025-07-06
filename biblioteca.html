@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca FCJA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/biblioteca.css" />
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="topo">
+      <img src="Imagens/logofcja.png" alt="Logo FCJA" class="logo">
+      <div class="titulo">
+        <h1>Biblioteca</h1>
+        <h2>Dumerval Trigueiro Mendes</h2>
+      </div>
+      <img src="Imagens/brasao.jpg" alt="Brasão" class="brasao">
+    </div>
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="colecoes.html">Coleções</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+       <li><a href="index.html">Voltar ao SIB</a></li>
+    </ul>
+  </nav>
+
+  <section class="citacao-caixa fade-in">
+    <blockquote>
+      “Se nós lhe dermos a solidão, o indivíduo descobrirá a sociedade.
+      Se lhe concedermos o lazer, ele realiza o trabalho que muda a qualidade de vida.
+      Se dermos a autonomia, ele reinventa o mundo”<br>
+      <span>– Durmeval Trigueiro</span>
+    </blockquote>
+  </section>
+
+  <a href="chat.html" class="chat-botao-lateral" title="Fale conosco pelo chat">
+    💬 CHAT
+  </a>
+
+  <footer>
+    <div class="footer-conteudo">
+      <p><strong>VISITE-NOS</strong><br>
+        Horário de funcionamento da Biblioteca FCJA:<br>
+        08:30 às 16:00 horas<br>
+        Av. Cabo Branco, 3336 – Cabo Branco, João Pessoa – PB<br>
+        CEP: 58045-010
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const observers = document.querySelectorAll('.fade-in');
+    const config = { threshold: 0.1 };
+    const aparecer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('apareceu');
+        observer.unobserve(entry.target);
+      });
+    }, config);
+    observers.forEach(el => aparecer.observe(el));
+  </script>
+
+</body>
+</html>

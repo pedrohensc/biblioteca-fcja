@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agendamento - FCJA</title>
+  <style>
+    /* Seu CSS já colocado aqui para funcionar direto */
+    /* Cores institucionais */
+    .bg-fcja {
+      background: linear-gradient(to bottom, #7f1d1d, #ad1717);
+    }
+    .text-fcja {
+      color: #7f1d1d;
+    }
+
+    /* Cabeçalho */
+    .header {
+      background: linear-gradient(to bottom, #7f1d1d, #ad1717);
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Cursor */
+    body, html {
+      cursor: default;
+      scroll-behavior: smooth;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden; /* evita barra horizontal da página */
+    }
+    a,
+    button,
+    .navbar-nav .nav-link,
+    .navbar-nav .dropdown-item {
+      cursor: pointer;
+    }
+
+    /* iframe styling */
+    .form-container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      background: #fff3f3;
+    }
+    iframe {
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      width: 640px;
+      height: 3200px; /* aumentei a altura */
+      /* overflow: hidden; removido para não cortar conteúdo */
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header bg-fcja">
+    Formulário de Agendamento
+  </header>
+
+  <main class="form-container">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSflYfqPNeJjsXcX6NrBVEAWYUdDMk2LjCEDjPuC6d9ilCL9_w/viewform?embedded=true" 
+      width="640" 
+      height="3200" 
+      marginheight="0" 
+      marginwidth="0"
+      title="Formulário de Agendamento"
+      loading="lazy"
+    >
+      Carregando…
+    </iframe>
+  </main>
+
+</body>
+</html>
